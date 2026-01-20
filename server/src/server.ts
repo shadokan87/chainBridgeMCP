@@ -68,9 +68,8 @@ const server = new McpServer(
     description: "Get available product categories/groups for retailer search. Use this to discover what product types are available before searching for retailers.",
     inputSchema: {},
   },
-  async () => {
+  async ({}) => {
     try {
-      console.log("[product-groups] CHAINBRIDGE_API_BASE:", CHAINBRIDGE_API_BASE);
       const url = `${CHAINBRIDGE_API_BASE}/api/product-groups`;
       console.log("[product-groups] Fetching from:", url);
       
